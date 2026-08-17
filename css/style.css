@@ -1,0 +1,429 @@
+/* Style.css - Marcos Lima's Portfolio
+---------------------------------------------------------
+* Theme Name: Marcos Lima's Portfolio
+* Author: Marcos Vinicius Martins de Lima
+* Version: 1.0.0
+---------------------------------------------------------
+*/
+
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Yanone+Kaffeesatz:wght@200..700&display=swap');
+
+/* Tokens */
+:root {
+  --font-body: 'Roboto', sans-serif;
+  --font-header: 'Yanone Kaffeesatz', sans-serif;
+  --accent: #cc0000;
+}
+
+[data-theme="dark"] {
+  --bg: #0a0a0a;
+  --bg-nav : rgba(10,10,10,.75);
+  --surface: #1d1d1d;
+  --text: #f2f2f2;
+  --shadow: rgba(242,242,242,.15);
+  .light-logo {
+    display: block;
+  }
+  .dark-logo {
+    display: none;
+  }
+}
+
+[data-theme="light"] {
+  --bg: #f2f2f2;
+  --bg-nav : rgba(242,242,242,.75);
+  --surface: #e4e4e4;
+  --text: #0a0a0a;
+  --shadow: rgba(10,10,10,.35);
+  .light-logo {
+    display: none;
+  }
+  .dark-logo {
+    display: block;
+  }
+}
+
+/* Main */
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  display: block;
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-header);
+  font-weight: 600;
+}
+
+p {
+  color: var(--text);
+  font-size: .75rem;
+  text-align: left;
+}
+
+ul li {
+  color: var(--text);
+  font-size: .75rem;
+}
+
+/* Header */
+.navbar {
+  background: var(--bg);
+}
+
+.scroll {
+  background-color: var(--bg-nav);
+  backdrop-filter: blur(1rem);
+  border-bottom: 1px solid transparent;
+}
+
+.navbar-brand {
+  padding: .5rem 0;
+}
+
+.navbar-brand img {
+  height: 1.5rem;
+}
+
+.nav-link {
+  font-size: .875rem;
+  color: var(--text);
+  font-weight: 500;
+  &:hover {
+    color: var(--accent);
+  }
+}
+
+.nav-theme {
+  background: none;
+  border: none;
+  color: var(--text);
+  margin: 0 0 0 2rem;
+  outline: none;
+  &:hover {
+    color: var(--accent);
+  }
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .nav-theme {
+    margin: 1rem 0 0 0;
+  }
+}
+
+.navbar-toggler {
+  color: var(--text);
+  &:hover {
+    color: var(--accent);
+  }
+}
+
+/* Home */
+#home {
+  height: 100dvh;
+  background-image: url(../images/main-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.portfolio {
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.name {
+  height: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.update {
+  font-size: .75rem;
+  span {
+    font-weight: 600;
+  }
+}
+
+/* About */
+#about {
+  padding: 4.5rem 0;
+  background: linear-gradient(var(--surface), var(--bg));
+}
+
+.skills {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  li {
+    padding: .25rem .5rem;
+    border-right: 1px solid var(--accent);
+    border-bottom: 1px solid var(--accent);
+    border-radius: .25rem 0 .25rem 0;
+    margin-right: 1rem;
+    margin-bottom: .75rem;
+    font-size: .75rem;
+    font-style: italic;
+    &:hover {
+      cursor: default;
+      background-color: var(--surface);
+    }
+  }
+}
+
+.resume {
+  width: 100%;
+  .download {
+    padding: .5rem 1rem;
+    background-color: var(--accent);
+    color: #fff;
+    font-weight: 600;
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+    i {
+      margin-right: .5rem;
+    }
+    &:hover {
+      transform: translateY(-.25rem);
+      text-decoration: none;
+      filter: saturate(85%);
+    }
+  }
+}
+
+.profile {
+  border-radius: 1rem 0 1rem 0;
+  border-right: .25rem solid var(--accent);
+  border-bottom: .25rem solid var(--accent);
+}
+
+/* Process */
+#process {
+  padding: 4.5rem 0;
+  background-color: var(--surface);
+}
+
+.card {
+  background-color: var(--bg-nav);
+  border: none;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow) 2px 2px 2px;
+  .card-body {
+    padding: .5rem 1rem;
+    h4 {
+      font-size: 1.25rem;
+      span {
+        font-size: 1.5rem;
+        color: var(--accent);
+        font-weight: 900;
+        padding-right: .5rem;
+      }
+    }
+  }
+}
+
+/* Projects */
+#projects {
+  padding: 4.5rem 0;
+  background: linear-gradient(var(--bg), var(--surface));
+}
+
+.project-img {
+  height: 10rem;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem 1rem 0 0;
+  margin-bottom: -4rem;
+  img {
+    border-radius: .25rem;
+    object-fit: cover;
+    height: 100%;
+    margin: auto;
+  }
+}
+
+.project-desc {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.case {
+  margin-bottom: 0;
+  .case-link {
+    color: var(--text);
+    font-weight: 600;
+    i {
+      color: var(--accent);
+      margin-left: .25rem;
+    }
+  }
+}
+
+/* Parallax */
+.parallax {
+	background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Contact */
+#contact {
+  padding: 4.5rem 0 2rem;
+}
+
+.information i {
+  color: var(--accent);
+  margin-right: .5rem;
+}
+
+.information a {
+  color: var(--text);
+}
+
+/* Briefing */
+#briefing {
+  padding: 4.5rem 0 2rem;
+}
+
+.project-back {
+  font-size: .75rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem 0;
+  a {
+    color: var(--text);
+    i {
+      color: var(--accent);
+      margin-right: .25rem;
+    }
+  }
+}
+
+.project {
+  border-radius: .5rem;
+}
+
+@media (max-width: 767px) {
+  .project {
+    margin-bottom: 2rem;
+  }
+}
+
+.project-name p {
+  margin-bottom: 0;
+  font-size: .75rem;
+}
+
+/* User Flowchart */
+#flowchart {
+  padding: 2rem 0;
+  background: linear-gradient(var(--surface), var(--bg));
+}
+
+.user-flow {
+  height: auto;
+  overflow-x: scroll;
+  padding: 1rem 0;
+}
+
+/* Current Design */
+#current {
+  padding: 2rem 0;
+}
+
+#current.diff {
+  background: linear-gradient(var(--surface), var(--bg));
+}
+
+/* Prototype */
+#prototype {
+  padding: 2rem 0;
+  background: linear-gradient(var(--bg), var(--surface));
+}
+
+#prototype.diff {
+  background: var(--surface)
+}
+
+.prot-imgs {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  .mobile {
+    width: 300px;
+    border-radius: 1rem;
+  }
+  .desktop {
+    width: 100%;
+    border-radius: 1rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .prot-imgs .mobile {
+    width: 250px
+  }
+}
+
+/* Other Projects */
+#other {
+  padding: 2rem 0;
+  background: linear-gradient(var(--surface), var(--bg));
+}
+
+/* Footer */
+footer {
+  border-top: 2px solid var(--surface);
+}
+
+.copyright {
+  font-size: .75rem;
+  text-align: left;
+  margin-bottom: 0;
+  padding: 1rem 0;
+  span {
+    color: var(--accent);
+    font-weight: 700;
+  }
+}
+
+.nav-back {
+  font-size: .75rem;
+  text-align: right;
+  margin-bottom: 0;
+  padding: 1rem 0;
+  a {
+    color: var(--text);
+    i {
+      color: var(--accent);
+      margin-right: .25rem;
+    }
+  }
+}
