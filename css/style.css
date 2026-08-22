@@ -70,6 +70,7 @@ h5,
 h6 {
   font-family: var(--font-header);
   font-weight: 600;
+  color: var(--text);
 }
 
 p {
@@ -201,7 +202,8 @@ ul li {
     border-radius: .5rem;
     margin-bottom: 1rem;
     transition: transform 0.3s ease;
-    i {
+    text-decoration: none;
+    & .resume-icon {
       margin-right: .5rem;
     }
     &:hover {
@@ -278,7 +280,8 @@ ul li {
   .case-link {
     color: var(--text);
     font-weight: 600;
-    i {
+    text-decoration: none;
+    & .proj-icon {
       color: var(--accent);
       margin-left: .25rem;
     }
@@ -298,13 +301,14 @@ ul li {
   padding: 4.5rem 0 2rem;
 }
 
-.information i {
+.information .info-icon {
   color: var(--accent);
   margin-right: .5rem;
 }
 
 .information a {
   color: var(--text);
+  text-decoration: none;
 }
 
 /* Briefing */
@@ -318,7 +322,8 @@ ul li {
   padding: 1rem 0;
   a {
     color: var(--text);
-    i {
+    text-decoration: none;
+    .proj-icon {
       color: var(--accent);
       margin-right: .25rem;
     }
@@ -421,7 +426,8 @@ footer {
   padding: 1rem 0;
   a {
     color: var(--text);
-    i {
+    text-decoration: none;
+    .back-icon {
       color: var(--accent);
       margin-right: .25rem;
     }
