@@ -366,6 +366,11 @@ ul li {
   background: linear-gradient(var(--surface), var(--bg));
 }
 
+/* Wireframe */
+#wireframe {
+  padding: 2rem 0;
+}
+
 /* Prototype */
 #prototype {
   padding: 2rem 0;
