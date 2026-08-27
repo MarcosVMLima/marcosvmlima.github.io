@@ -131,10 +131,32 @@ ul li {
   .nav-theme {
     margin: 1rem 0 0 0;
   }
+  .btn-group {
+    margin: 1rem 0 0 0;
+  }
+}
+
+.btn-group {
+  margin-left: 2rem;
+}
+
+.btn-group .btn {
+  border: none;
+  filter: grayscale(1);
+  &:hover {
+    filter: none;
+  }
+}
+
+.btn-check:checked + .btn {
+  background-color: none;
+  border-color: none;
+  filter: none;
 }
 
 .navbar-toggler {
   color: var(--text);
+  box-shadow: none !important;
   &:hover {
     color: var(--accent);
   }
@@ -235,12 +257,13 @@ ul li {
   .card-body {
     padding: .5rem 1rem;
     h4 {
-      font-size: 1.25rem;
+      font-size: 1.5rem;
+      color: var(--accent);
+      font-weight: 900;
       span {
-        font-size: 1.5rem;
-        color: var(--accent);
-        font-weight: 900;
-        padding-right: .5rem;
+        font-size: 1.25rem;
+        color: var(--text);
+        padding-left: .5rem;
       }
     }
   }
@@ -250,6 +273,11 @@ ul li {
 #projects {
   padding: 4.5rem 0;
   background: linear-gradient(var(--bg), var(--surface));
+}
+
+.project-title {
+  color: var(--text) !important;
+  font-size: 1.25rem !important;
 }
 
 .project-img {

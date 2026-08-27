@@ -10,6 +10,7 @@ jQuery(function($) {
   });
 });
 
+
 const toggleButton = document.getElementById('theme-toggle');
 
 // 1. Check for saved theme preference on page load

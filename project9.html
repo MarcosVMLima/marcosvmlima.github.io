@@ -10,9 +10,10 @@
   <!-- Favicon -->
   <link rel="shortcut icon" href="images/favicon.png">
   <!-- Title -->
-  <title>Marcos Lima - UX/UI Designer</title>
+  <title>Marcos Lima - UX/UI Designer | Product Designer</title>
   <!-- CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://flagcdn.io/css/flag-icons.min.css" />
   <link rel="stylesheet" href="css/style.css">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VEK3ZGQ4BC"></script>
@@ -37,15 +38,21 @@
         </button>
         <div class="collapse navbar-collapse align-items-center justify-content-end" id="navbarMain">
           <div class="navbar-nav ml-auto align-items-center">
-            <a class="nav-link" href="./#home">Home</a>
-            <a class="nav-link" href="./#about">About</a>
-            <a class="nav-link" href="./#process">Process</a>
-            <a class="nav-link" href="./#projects">Projects</a>
-            <a class="nav-link" href="./#contact">Contact</a>
+            <a class="nav-link" href="./#home" data-i18n="home">Home</a>
+            <a class="nav-link" href="./#about" data-i18n="about">About</a>
+            <a class="nav-link" href="./#process" data-i18n="process">Process</a>
+            <a class="nav-link" href="./#projects" data-i18n="projects">Projects</a>
+            <a class="nav-link" href="./#contact" data-i18n="contact">Contact</a>
             <button id="theme-toggle" class="nav-theme">
               <i class="fas fa-sun light-logo"></i>
               <i class="fas fa-moon dark-logo"></i>
             </button>
+            <div id="language-toggle" class="btn-group" role="group" aria-label="Language Toggle">
+              <input type="radio" class="btn-check" name="btnradio" id="english" value="en" autocomplete="off" checked>
+              <label class="btn" for="english"><span class="fi fi-us"></span></label>
+              <input type="radio" class="btn-check" name="btnradio" id="portuguese" value="pt" autocomplete="off">
+              <label class="btn" for="portuguese"><span class="fi fi-br"></span></label>
+            </div>
           </div>
         </div>
       </div>
@@ -56,7 +63,7 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-12">
-          <p class="project-back"><a href="./#projects"><i class="proj-icon fas fa-arrow-left"></i>Back to Projects</a></p>
+          <p class="project-back"><a href="./#projects"><i class="proj-icon fas fa-arrow-left"></i><span data-i18n="backtoprojects">Back to Projects</span></a></p>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6 col-8">
           <img class="img-fluid project" src="images/projects/entouch/01.png" alt="Entouch Portal">
@@ -64,43 +71,43 @@
         <div class="col-lg col-md">
           <div class="row project-name">
             <div class="col-6">
-              <p>Project Name</p>
+              <p data-i18n="projectname">Project Name</p>
               <h4>Entouch Portal</h4>
             </div>
             <div class="col-6">
-              <p class="text-right">Company</p>
+              <p class="text-right" data-i18n="company">Company</p>
               <h4 class="text-right">Entouch Controls</h4>
             </div>
           </div>
           <h5 class="mt-3">Briefing</h5>
-          <p>Redesign the layout for the Entouch Controls Portal for management of HVAC and refrigeration systems.</p>
-          <h5 class="mt-4">Problem</h5>
+          <p data-i18n="entouch1">Redesign the layout for the Entouch Controls Portal for management of HVAC and refrigeration systems.</p>
+          <h5 class="mt-4" data-i18n="problem">Problem</h5>
           <ul>
-            <li>The layout is outdated and needs lots of training to be able to work well with it;</li>
-            <li>Lots of clients use only a part of the system, not the whole.</li>
+            <li data-i18n="entouch2">The layout is outdated and needs lots of training to be able to work well with it;</li>
+            <li data-i18n="entouch3">Lots of clients use only a part of the system, not the whole.</li>
           </ul>
-          <h5 class="mt-4">Main Goal</h5>
-          <p>Modernize the layout for the system and make it easier to find the information the client needs.</p>
-          <h5 class="mt-4">Research</h5>
-          <h6>User Interviews:</h6>
+          <h5 class="mt-4" data-i18n="maingoal">Main Goal</h5>
+          <p data-i18n="entouch4">Modernize the layout for the system and make it easier to find the information the client needs.</p>
+          <h5 class="mt-4" data-i18n="research">Research</h5>
+          <h6 data-i18n="userinterviews">User Interviews:</h6>
           <ul>
-            <li>We need and easier system, it is too hard to find some things we need and takes lots of steps;</li>
-            <li>The look is really outdated, maybe do something more modern;</li>
-            <li>Some parts of the system need a better highlight, like the temperature widget.</li>
+            <li data-i18n="entouch5">We need and easier system, it is too hard to find some things we need and takes lots of steps;</li>
+            <li data-i18n="entouch6">The look is really outdated, maybe do something more modern;</li>
+            <li data-i18n="entouch7">Some parts of the system need a better highlight, like the temperature widget.</li>
           </ul>
-          <h6>Competitor Analysis:</h6>
+          <h6 data-i18n="competitoranalysis">Competitor Analysis:</h6>
           <ul>
-            <li>Modern look and easier usability;</li>
-            <li>It is simple to access the important parts of the system.</li>
+            <li data-i18n="entouch8">Modern look and easier usability;</li>
+            <li data-i18n="entouch9">It is simple to access the important parts of the system.</li>
           </ul>
-          <h5 class="mt-4">Design Process</h5>
+          <h5 class="mt-4" data-i18n="designprocess">Design Process</h5>
           <ul>
-            <li>Interview users and stakeholders;</li>
-            <li>Reseach the competitors;</li>
-            <li>Review user flowchart;</li>
-            <li>Review pages needed in the system;</li>
-            <li>Design wireframes;</li>
-            <li>Design prototype.</li>
+            <li data-i18n="entouch10">Interview users and stakeholders;</li>
+            <li data-i18n="entouch11">Research the competitors;</li>
+            <li data-i18n="entouch12">Review user flowchart;</li>
+            <li data-i18n="entouch13">Review pages needed in the system;</li>
+            <li data-i18n="entouch14">Design wireframes;</li>
+            <li data-i18n="entouch15">Design prototype.</li>
           </ul>
         </div>
       </div>
@@ -111,7 +118,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <h5 class="mb-4">Current Design</h5>
+          <h5 class="mb-4" data-i18n="currentdesign">Current Design</h5>
           <div class="prot-imgs">
             <img class="desktop" src="images/projects/entouch/01-a.png" alt="">
             <img class="desktop" src="images/projects/entouch/02-a.png" alt="">
@@ -139,7 +146,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <h5 class="mb-4">Prototype</h5>
+          <h5 class="mb-4" data-i18n="prototype">Prototype</h5>
           <div class="prot-imgs">
             <img class="desktop" src="images/projects/entouch/01.png" alt="">
             <img class="desktop" src="images/projects/entouch/02.png" alt="">
@@ -153,7 +160,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h2>Other Projects</h2>
+          <h2 data-i18n="otherprojects">Other Projects</h2>
         </div>
       </div>
       <div class="row">
@@ -164,9 +171,9 @@
           </div>
           <div class="card">
             <div class="card-body">
-              <h4>GDNI Motoristas</h4>
-              <p class="project-desc">An app to book a car from the fleet from Grupo NotreDame Intermédica, where you can choose a car, schedule a day for use and verify the vehicle details.</p>
-              <p class="text-end case"><a class="case-link" href="/project1.html">See Project<i class="proj-icon fas fa-arrow-right"></i></a></p>
+              <h4 class="project-title">GDNI Motoristas</h4>
+              <p class="project-desc" data-i18n="project1desc">An app to book a car from the fleet from Grupo NotreDame Intermédica, where you can choose a car, schedule a day for use and verify the vehicle details.</p>
+              <p class="text-end case"><a class="case-link" href="/project1.html"><span data-i18n="seeproject">See Project</span><i class="proj-icon fas fa-arrow-right"></i></a></p>
             </div>
           </div>
         </div>
@@ -178,9 +185,9 @@
           </div>
           <div class="card">
             <div class="card-body">
-              <h4>coWorking</h4>
-              <p class="project-desc">An app to book rooms or individual spaces for Coworkings, where you can choose by region, select room details, book and pay for it.</p>
-              <p class="text-end case"><a class="case-link" href="/project2.html">See Project<i class="proj-icon fas fa-arrow-right"></i></a></p>
+              <h4 class="project-title">coWorking</h4>
+              <p class="project-desc" data-i18n="project2desc">An app to book rooms or individual spaces for Coworkings, where you can choose by region, select room details, book and pay for it.</p>
+              <p class="text-end case"><a class="case-link" href="/project2.html"><span data-i18n="seeproject">See Project</span><i class="proj-icon fas fa-arrow-right"></i></a></p>
             </div>
           </div>
         </div>
@@ -192,9 +199,9 @@
           </div>
           <div class="card">
             <div class="card-body">
-              <h4>Invitee</h4>
-              <p class="project-desc">An easy way to alocate our employees when they need to come to the office, so they can book meeting rooms or working station respecting social distances.</p>
-              <p class="text-end case"><a class="case-link" href="/project3.html">See Project<i class="proj-icon fas fa-arrow-right"></i></a></p>
+              <h4 class="project-title">Invitee</h4>
+              <p class="project-desc" data-i18n="project3desc">An easy way to alocate our employees when they need to come to the office, so they can book meeting rooms or working station respecting social distances.</p>
+              <p class="text-end case"><a class="case-link" href="/project3.html"><span data-i18n="seeproject">See Project</span><i class="proj-icon fas fa-arrow-right"></i></a></p>
             </div>
           </div>
         </div>
@@ -206,9 +213,9 @@
           </div>
           <div class="card">
             <div class="card-body">
-              <h4>FieldService</h4>
-              <p class="project-desc">Our field workers need and app to help them with their appointments, to know when and where it is and what to do there.</p>
-              <p class="text-end case"><a class="case-link" href="/project4.html">See Project<i class="proj-icon fas fa-arrow-right"></i></a></p>
+              <h4 class="project-title">FieldService</h4>
+              <p class="project-desc" data-i18n="project4desc">Our field workers need and app to help them with their appointments, to know when and where it is and what to do there.</p>
+              <p class="text-end case"><a class="case-link" href="/project4.html"><span data-i18n="seeproject">See Project</span><i class="proj-icon fas fa-arrow-right"></i></a></p>
             </div>
           </div>
         </div>
@@ -220,9 +227,9 @@
           </div>
           <div class="card">
             <div class="card-body">
-              <h4>Amigo Secreto</h4>
-              <p class="project-desc">An app to create, draw and prepare a secret santa, with a way to get more information about the person you pick and their wanted gifts.</p>
-              <p class="text-end case"><a class="case-link" href="/project5.html">See Project<i class="proj-icon fas fa-arrow-right"></i></a></p>
+              <h4 class="project-title">Amigo Secreto</h4>
+              <p class="project-desc" data-i18n="project5desc">An app to create, draw and prepare a secret santa, with a way to get more information about the person you pick and their wanted gifts.</p>
+              <p class="text-end case"><a class="case-link" href="/project5.html"><span data-i18n="seeproject">See Project</span><i class="proj-icon fas fa-arrow-right"></i></a></p>
             </div>
           </div>
         </div>
@@ -234,9 +241,9 @@
           </div>
           <div class="card">
             <div class="card-body">
-              <h4>MobyPharma</h4>
-              <p class="project-desc">Redesign the MobyPharma app, used for request and payment for medicine, directly with the pharmacy of your choice, with integrated chat, multiple payment methods and news about the branch of business.</p>
-              <p class="text-end case"><a class="case-link" href="/project6.html">See Project<i class="proj-icon fas fa-arrow-right"></i></a></p>
+              <h4 class="project-title">MobyPharma</h4>
+              <p class="project-desc" data-i18n="project6desc">Redesign the MobyPharma app, used for request and payment for medicine, directly with the pharmacy of your choice, with integrated chat, multiple payment methods and news about the branch of business.</p>
+              <p class="text-end case"><a class="case-link" href="/project6.html"><span data-i18n="seeproject">See Project</span><i class="proj-icon fas fa-arrow-right"></i></a></p>
             </div>
           </div>
         </div>
@@ -248,9 +255,9 @@
           </div>
           <div class="card">
             <div class="card-body">
-              <h4>Phusion</h4>
-              <p class="project-desc">Redesign the layout for the ERP PharmaPhusion, a management system for compounding pharmacies.</p>
-              <p class="text-end case"><a class="case-link" href="/project7.html">See Project<i class="proj-icon fas fa-arrow-right"></i></a></p>
+              <h4 class="project-title">Phusion</h4>
+              <p class="project-desc" data-i18n="project7desc">Redesign the layout for the ERP PharmaPhusion, a management system for compounding pharmacies.</p>
+              <p class="text-end case"><a class="case-link" href="/project7.html"><span data-i18n="seeproject">See Project</span><i class="proj-icon fas fa-arrow-right"></i></a></p>
             </div>
           </div>
         </div>
@@ -262,9 +269,9 @@
           </div>
           <div class="card">
             <div class="card-body">
-              <h4>Learning Bits</h4>
-              <p class="project-desc">An institutional website layout for a new learning platform.</p>
-              <p class="text-end case"><a class="case-link" href="/project8.html">See Project<i class="proj-icon fas fa-arrow-right"></i></a></p>
+              <h4 class="project-title">Learning Bits</h4>
+              <p class="project-desc" data-i18n="project8desc">An institutional website layout for a new learning platform.</p>
+              <p class="text-end case"><a class="case-link" href="/project8.html"><span data-i18n="seeproject">See Project</span><i class="proj-icon fas fa-arrow-right"></i></a></p>
             </div>
           </div>
         </div>
@@ -276,9 +283,9 @@
           </div>
           <div class="card">
             <div class="card-body">
-              <h4>Entouch Controls</h4>
-              <p class="project-desc">Redesign the layout for the Entouch Controls Portal for management of HVAC and refrigeration systems.</p>
-              <p class="text-end case"><a class="case-link" href="/project9.html">See Project<i class="proj-icon fas fa-arrow-right"></i></a></p>
+              <h4 class="project-title">Entouch Controls</h4>
+              <p class="project-desc" data-i18n="project9desc">Redesign the layout for the Entouch Controls Portal for management of HVAC and refrigeration systems.</p>
+              <p class="text-end case"><a class="case-link" href="/project9.html"><span data-i18n="seeproject">See Project</span><i class="proj-icon fas fa-arrow-right"></i></a></p>
             </div>
           </div>
         </div> -->
